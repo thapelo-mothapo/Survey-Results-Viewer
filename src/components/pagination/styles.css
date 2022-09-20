@@ -1,0 +1,31 @@
+.pagination {
+  margin-top: 20px;
+  padding-right: 14px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+  letter-spacing: 0.16px;
+  /* Grey/Grey Base */
+  color: #495057;
+}
+
+.pagination select {
+  border: none;
+  outline: none;
+  margin-right: 36px;
+  width: 40px;
+}
+
+.pagination .prev-btn {
+  margin-left: 22px;
+  margin-right: 44px;
+}
+.pagination .prev-btn:hover,
+.pagination .next-btn:hover,
+.pagination select:hover {
+  cursor: pointer;
+}
