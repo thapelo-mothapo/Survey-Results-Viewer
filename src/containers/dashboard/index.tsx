@@ -44,12 +44,12 @@ const Dashboard: React.FC = () => {
     fetchPosts();
   }, []);
 
-  const indexOfLastPost: number = currentPage * surveysPerPage;
-  const indexOfFirstPost: number = indexOfLastPost - surveysPerPage;
-  const currentSurveys = surveys.slice(indexOfFirstPost, indexOfLastPost);
+  const indexOfLastSurvey: number = currentPage * surveysPerPage;
+  const indexOfFirstSurvey: number = indexOfLastSurvey - surveysPerPage;
+  const currentSurveys = surveys.slice(indexOfFirstSurvey, indexOfLastSurvey);
 
   if (loading) return <Spinner />;
-  if (!currentSurveys) return <NotFound />;
+  if (!currentSurveys.length) return <NotFound />;
 
   return (
     <main>

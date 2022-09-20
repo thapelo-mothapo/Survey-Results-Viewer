@@ -47,16 +47,15 @@ const SurveyDetails: React.FC = () => {
     fetchPosts();
   }, [id]);
 
-  // Get current posts
-  const indexOfLastPost: number = currentPage * responsesPerPage;
-  const indexOfFirstPost: number = indexOfLastPost - responsesPerPage;
-  const currentSurveys = survey?.responses.slice(
-    indexOfFirstPost,
-    indexOfLastPost
+  const indexOfLastResponse: number = currentPage * responsesPerPage;
+  const indexOfFirstResponse: number = indexOfLastResponse - responsesPerPage;
+  const currentResponses = survey?.responses.slice(
+    indexOfFirstResponse,
+    indexOfLastResponse
   );
 
   if (loading) return <Spinner />;
-  if (!currentSurveys) return <NotFound />;
+  if (!currentResponses?.length) return <NotFound />;
 
   return (
     <main>
@@ -74,7 +73,7 @@ const SurveyDetails: React.FC = () => {
 
       <Table
         headings={SURVEY_TABLE_HEADING}
-        children={currentSurveys?.map((response, index) => (
+        children={currentResponses?.map((response, index) => (
           <SurveyResponse key={index} response={response} />
         ))}
       />
