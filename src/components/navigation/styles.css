@@ -1,0 +1,45 @@
+.main-nav {
+  background-color: #f7f7f8;
+  width: 232px;
+  padding: 32px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-nav-top {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px #dee2e6 solid;
+  font-weight: 400;
+  padding-top: 20px;
+}
+
+.user-name {
+  display: flex;
+  flex-direction: column;
+}
+.secondary-user {
+  font-size: 14px;
+  line-height: 22px;
+  color: #495057;
+}
+
+.primary-user {
+  font-size: 12px;
+  line-height: 19px;
+  color: #868e96;
+}
+
+.brand-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.16px;
+  margin-left: 20px;
+}
