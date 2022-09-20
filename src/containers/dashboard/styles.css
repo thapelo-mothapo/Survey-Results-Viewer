@@ -1,0 +1,16 @@
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.16px;
+  color: #495057;
+}
+main {
+  position: relative;
+  flex: 75%;
+  padding-left: 40px;
+  padding-top: 38px;
+  max-width: 1208px;
+  padding-right: 40px;
+}
