@@ -30,8 +30,6 @@ const SurveyDetails: React.FC = () => {
 
   useEffect(() => {
     const fetchPosts = () => {
-      setLoading(true);
-
       setTimeout(async () => {
         await axios
           .get(`http://localhost:3000/surveys/${id}`)

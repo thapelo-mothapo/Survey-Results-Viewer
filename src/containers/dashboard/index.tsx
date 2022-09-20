@@ -27,8 +27,6 @@ const Dashboard: React.FC = () => {
 
   useEffect(() => {
     const fetchPosts = () => {
-      setLoading(true);
-
       setTimeout(async () => {
         await axios
           .get("http://localhost:3000/surveys/")
@@ -36,7 +34,10 @@ const Dashboard: React.FC = () => {
             setSurveys(response.data);
             setLoading(false);
           })
-          .catch((error) => console.log("survey fetch faild", error));
+          .catch((error) => {
+            console.log("survey fetch faild", error);
+            setLoading(false);
+          });
       }, 1500);
     };
 
