@@ -1,9 +1,9 @@
 import React from "react";
-import NotFound from "../../containers/404";
+
 import "./styles.css";
 
 interface Props {
-  headings: string[];
+  headings: any[];
   children: React.ReactNode;
 }
 const Table: React.FC<Props> = ({ headings, children }) => {

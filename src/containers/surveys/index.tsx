@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./styles.css";
-
+import Frown from "../../assets/frown.svg";
+import Smile from "../../assets/Smile.svg";
 import BackArrow from "../../assets/back-arrow.svg";
 
 import Pagination from "../../components/pagination";
@@ -15,8 +16,14 @@ import SurveyResponse from "../../components/surveys/SurveyDetails";
 const SURVEY_TABLE_HEADING = [
   "Name",
   "Duration (min)",
-  "Skipped",
-  "Completed",
+  <span style={{ display: "flex", alignItems: "center" }}>
+    <i style={{ marginRight: "8px" }}>Skipped</i>
+    <img src={Frown} alt="" />
+  </span>,
+  <span style={{ display: "flex", alignItems: "center" }}>
+    <i style={{ marginRight: "8px" }}>Completed</i>
+    <img src={Smile} alt="" />
+  </span>,
   "Date Completed",
 ];
 
