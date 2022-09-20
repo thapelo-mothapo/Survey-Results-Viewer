@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+.heading-title {
+  font-size: 14px;
+  line-height: 22px;
+  color: #495057;
+}
