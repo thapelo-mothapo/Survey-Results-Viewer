@@ -1,7 +1,7 @@
 import "./styles.css";
 import { Link } from "react-router-dom";
 
-const NotFound = () => {
+const PageNotFound = () => {
   return (
     <div className="main">
       <div className="fof">
@@ -14,4 +14,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default PageNotFound;

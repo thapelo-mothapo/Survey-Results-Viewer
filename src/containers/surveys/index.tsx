@@ -10,7 +10,7 @@ import Table from "../../components/table";
 import { Link, useParams } from "react-router-dom";
 import Spinner from "../../components/Spinner";
 import { SurveyType } from "../../utils/constants";
-import NotFound from "../404";
+import PageNotFound from "../404";
 import SurveyResponse from "../../components/surveys/SurveyDetails";
 
 const SURVEY_TABLE_HEADING = [
@@ -36,7 +36,7 @@ const SurveyDetails: React.FC = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchPosts = () => {
+    const fetchData = () => {
       setTimeout(async () => {
         await axios
           .get(`http://localhost:3000/surveys/${id}`)
@@ -51,7 +51,7 @@ const SurveyDetails: React.FC = () => {
       }, 1500);
     };
 
-    fetchPosts();
+    fetchData();
   }, [id]);
 
   const indexOfLastResponse: number = currentPage * responsesPerPage;
@@ -62,7 +62,7 @@ const SurveyDetails: React.FC = () => {
   );
 
   if (loading) return <Spinner />;
-  if (!currentResponses?.length) return <NotFound />;
+  if (!currentResponses?.length) return <PageNotFound />;
 
   return (
     <main>

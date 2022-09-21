@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import NotFound from "./containers/404";
+import PageNotFound from "./containers/404";
 import Dashboard from "./containers/dashboard";
 import SurveyDetails from "./containers/surveys";
 
@@ -17,7 +17,7 @@ const Router: React.FC = () => {
     },
     {
       path: "*",
-      element: <NotFound />,
+      element: <PageNotFound />,
     },
   ]);
 

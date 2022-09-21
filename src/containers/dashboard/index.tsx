@@ -7,7 +7,7 @@ import Table from "../../components/table";
 import Survey from "../../components/surveys/Survey";
 import Spinner from "../../components/Spinner";
 import { SurveyType } from "../../utils/constants";
-import NotFound from "../404";
+import PageNotFound from "../404";
 
 const SURVEY_TABLE_HEADING = [
   "Survey Name",
@@ -26,7 +26,7 @@ const Dashboard: React.FC = () => {
   const [surveysPerPage, setSurveysPerPage] = useState(5);
 
   useEffect(() => {
-    const fetchPosts = () => {
+    const fetchData = () => {
       setTimeout(async () => {
         await axios
           .get("http://localhost:3000/surveys/")
@@ -41,7 +41,7 @@ const Dashboard: React.FC = () => {
       }, 1500);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
 
   const indexOfLastSurvey: number = currentPage * surveysPerPage;
@@ -49,7 +49,7 @@ const Dashboard: React.FC = () => {
   const currentSurveys = surveys.slice(indexOfFirstSurvey, indexOfLastSurvey);
 
   if (loading) return <Spinner />;
-  if (!currentSurveys.length) return <NotFound />;
+  if (!currentSurveys.length) return <PageNotFound />;
 
   return (
     <main>
