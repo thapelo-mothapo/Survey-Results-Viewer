@@ -67,10 +67,8 @@ const SurveyDetails: React.FC = () => {
   return (
     <main>
       <header>
-        <div className="heading-title">
-          <h1>{survey?.survey_name}</h1>
-          <p>Creator: {survey?.creator}</p>
-        </div>
+        <h1 className="heading-title">{survey?.survey_name}</h1>
+
         <div className="heading-action">
           <Link to={"/"}>
             <img src={BackArrow} alt="" />

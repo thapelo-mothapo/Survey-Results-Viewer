@@ -1,7 +1,6 @@
 table {
   border-collapse: collapse;
-  margin-top: 38px;
-  border-bottom: 1px #dee2e6 solid;
+
   width: 100%;
 }
 thead tr {
@@ -66,4 +65,19 @@ tbody tr:nth-child(odd) td:last-child {
   line-height: 11px;
   letter-spacing: 0.16px;
   color: #495057;
+}
+
+.tableFixHead {
+  margin-top: 38px;
+  overflow-y: auto;
+  height: 75vh;
+  border-bottom: 1px #dee2e6 solid;
+}
+.tableFixHead thead th {
+  position: sticky;
+  top: 0;
+}
+
+th {
+  background: white;
 }

@@ -8,16 +8,18 @@ interface Props {
 }
 const Table: React.FC<Props> = ({ headings, children }) => {
   return (
-    <table>
-      <thead>
-        <tr>
-          {headings.map((heading, index) => (
-            <th key={index}>{heading}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>{children}</tbody>
-    </table>
+    <div className="tableFixHead">
+      <table>
+        <thead>
+          <tr>
+            {headings.map((heading, index) => (
+              <th key={index}>{heading}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>{children}</tbody>
+      </table>
+    </div>
   );
 };
 
